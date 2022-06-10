@@ -16,6 +16,7 @@ const TerceiroComponente = () => {
     return (
         
         <container  className="App">
+            
             <h1>Calculadora </h1>
             <label>Primeiro Número</label>
             <input type="number" value={num1} onChange={(e) => num1 = e.target.value} />
