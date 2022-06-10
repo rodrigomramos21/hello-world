@@ -1,19 +1,29 @@
+import './styles.css';
 
 const TerceiroComponente = () => {
+
+    let num1;
+    let num2;
+    let soma;
+    let result;
+    
+    const resultado = () => {
+    soma = parseInt(num1) + parseInt(num2);
+    result = Math.pow(soma, 2)
+    console.log(result);
+    }
+
     return (
-        <>
-        <div class="centro">
-                Primeiro valor:
-                <input class="num1" type="text"/>
-                Segundo valor:
-                <input class="num2" type="number"/>
-                <button onclick="clicar()">Resultado</button>
-                <p class="resultado"></p>
-   
-            </div>
-            
-            </>
-        );
+        
+        <container  className="App">
+            <h1>Calculadora </h1>
+            <label>Primeiro Número</label>
+            <input type="number" value={num1} onChange={(e) => num1 = e.target.value} />
+            <label>Segundo Número</label>
+            <input type="number" value={num2} onChange={(e) => num2 = e.target.value}/>
+            <button className="btn" onClick={resultado}>Resultado</button>  
+        </container>
+    )
 }
 
 export default TerceiroComponente;
